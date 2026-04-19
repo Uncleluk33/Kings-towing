@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingz Towing | 24/7 Tow Truck Baltimore MD</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Arial', sans-serif; background: #0d0d0d; color: #fff; }
+  a { color: inherit; text-decoration: none; }
+
+  /* BRICK TEXTURE */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+      repeating-linear-gradient(0deg, transparent, transparent 39px, #1a1a1a 39px, #1a1a1a 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, #1a1a1a 79px, #1a1a1a 80px);
+    background-color: #0d0d0d;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: #000; border-bottom: 2px solid #CC2200;
+    padding: 1rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .logo-svg { width: 160px; height: 55px; }
+  .call-btn {
+    background: #CC2200; color: #fff;
+    padding: 0.7rem 1.5rem; border-radius: 6px;
+    font-size: 1rem; font-weight: 900;
+    font-family: 'Impact', sans-serif; letter-spacing: 1px;
+    border: 2px solid #CC2200; transition: all 0.2s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .call-btn:hover { background: transparent; color: #CC2200; }
+
+  .hero {
+    position: relative; z-index: 1;
+    min-height: 90vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 4rem 2rem;
+  }
+  .hero-badge {
+    display: inline-block; background: #CC2200; color: #fff;
+    font-family: 'Impact', sans-serif; font-size: 0.85rem; letter-spacing: 3px;
+    padding: 0.4rem 1.2rem; border-radius: 4px;
+    margin-bottom: 2rem; text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 900; letter-spacing: 2px;
+    color: #CC2200; text-transform: uppercase;
+    margin-bottom: 1rem; line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  }
+  .hero h1 span { color: #ffffff !important; text-shadow: 2px 2px 6px rgba(0,0,0,0.9); }
+  .hero p { font-size: 1.1rem; color: #aaa; max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.7; }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #CC2200; color: #fff;
+    padding: 1.1rem 2.5rem; border-radius: 6px;
+    font-family: 'Impact', sans-serif; font-size: 1.4rem; letter-spacing: 2px;
+    border: 3px solid #CC2200; transition: all 0.2s;
+  }
+  .hero-cta:hover { background: transparent; color: #CC2200; }
+  .hero-sub { margin-top: 1rem; font-size: 0.85rem; color: #666; letter-spacing: 1px; }
+
+  .section { position: relative; z-index: 1; padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .section-header { text-align: center; margin-bottom: 3rem; }
+  .section-label { font-family: 'Impact', sans-serif; font-size: 0.8rem; letter-spacing: 4px; color: #CC2200; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .section h2 { font-family: 'Impact', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: 3px; color: #fff; text-transform: uppercase; }
+  .section h2 span { color: #CC2200; }
+
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+  .service-card { background: #111; border: 1px solid #222; border-top: 3px solid #CC2200; border-radius: 8px; padding: 2rem 1.5rem; transition: all 0.2s; }
+  .service-card:hover { background: #161616; }
+  .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .service-card h3 { font-family: 'Impact', sans-serif; font-size: 1.1rem; letter-spacing: 2px; color: #fff; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .service-card p { font-size: 0.875rem; color: #888; line-height: 1.65; }
+
+  .areas-section { position: relative; z-index: 1; background: #111; border-top: 2px solid #CC2200; border-bottom: 2px solid #CC2200; padding: 4rem 2rem; }
+  .areas-inner { max-width: 1100px; margin: 0 auto; }
+  .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .area-item { background: #0a0a0a; border: 1px solid #222; border-radius: 6px; padding: 0.75rem 1rem; text-align: center; font-size: 0.875rem; color: #aaa; letter-spacing: 1px; font-weight: 700; text-transform: uppercase; transition: all 0.2s; }
+  .area-item:hover { border-color: #CC2200; color: #CC2200; }
+
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+  .review-card { background: #111; border: 1px solid #222; border-radius: 8px; padding: 1.5rem; }
+  .stars { color: #CC2200; font-size: 1rem; margin-bottom: 0.75rem; letter-spacing: 2px; }
+  .review-text { font-size: 0.9rem; color: #aaa; line-height: 1.65; margin-bottom: 1rem; font-style: italic; }
+  .review-author { font-size: 0.8rem; color: #666; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+  .why-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 1rem 0; }
+  .why-bullet { width: 24px; height: 24px; background: #CC2200; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 900; color: #fff; margin-top: 2px; }
+  .why-item p { font-size: 0.9rem; color: #aaa; font-weight: 600; line-height: 1.5; }
+
+  .cta-section { position: relative; z-index: 1; background: #CC2200; padding: 5rem 2rem; text-align: center; }
+  .cta-section h2 { font-family: 'Impact', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: 4px; color: #fff; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .cta-section p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 2rem; }
+  .cta-call-btn { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: #CC2200; padding: 1.1rem 2.5rem; border-radius: 6px; font-family: 'Impact', sans-serif; font-size: 1.5rem; letter-spacing: 2px; border: 3px solid #fff; transition: all 0.2s; }
+  .cta-call-btn:hover { background: transparent; color: #fff; }
+
+  footer { position: relative; z-index: 1; background: #000; border-top: 2px solid #CC2200; padding: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  footer p { font-size: 0.8rem; color: #555; }
+  footer a { color: #CC2200; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0.75rem 1rem; }
+    .hero { min-height: 70vh; }
+    footer { justify-content: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <svg class="logo-svg" viewBox="0 0 160 55">
+    <polygon points="10,10 20,28 30,16 40,30 50,10 60,30 70,16 80,28 90,10 90,34 10,34" fill="none" stroke="#CC2200" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="2" y="50" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="none" stroke="#CC2200" stroke-width="5" stroke-linejoin="round">KINGZ</text>
+    <text x="2" y="50" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#fff">KINGZ</text>
+    <text x="100" y="50" font-family="Impact, Arial Black, sans-serif" font-size="13" font-weight="900" fill="#aaa" letter-spacing="2">TOWING</text>
+  </svg>
+  <a href="tel:+14438620500" class="call-btn">&#9990; (443) 862-0500</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">24/7 Emergency Towing — Baltimore MD</div>
+  <div style="margin-bottom:1.5rem;">
+    <svg width="320" height="120" viewBox="0 0 320 120">
+      <polygon points="60,8 78,38 96,20 114,44 132,8 150,44 168,20 186,38 204,8 204,50 60,50" fill="none" stroke="#CC2200" stroke-width="3" stroke-linejoin="round"/>
+      <text x="160" y="98" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="72" font-weight="900" fill="none" stroke="#CC2200" stroke-width="10" stroke-linejoin="round">KINGZ</text>
+      <text x="160" y="98" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="72" font-weight="900" fill="#fff">KINGZ</text>
+      <rect x="72" y="98" width="4" height="16" rx="2" fill="#CC2200" opacity="0.7"/>
+      <rect x="138" y="98" width="3" height="20" rx="2" fill="#CC2200" opacity="0.5"/>
+      <rect x="210" y="98" width="4" height="14" rx="2" fill="#CC2200" opacity="0.6"/>
+      <rect x="178" y="98" width="2" height="18" rx="2" fill="#CC2200" opacity="0.4"/>
+    </svg>
+  </div>
+  <h1>Baltimore's <span>Most Trusted</span> Towing Service</h1>
+  <p>Fast, professional towing and roadside assistance across Baltimore City, Baltimore County, and Carroll County — available 24/7/365.</p>
+  <a href="tel:+14438620500" class="hero-cta">&#9990; Call Now — (443) 862-0500</a>
+  <p class="hero-sub">AVAILABLE 24 HOURS · 7 DAYS A WEEK · 365 DAYS A YEAR</p>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">What We Do</div>
+    <h2>Fast & Affordable <span>Towing Services</span></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon">🚛</div><h3>Professional Towing</h3><p>Professional towing service throughout our extended service area. Cars, trucks, vans, and SUVs. Whatever your need, Kingz Towing has you covered.</p></div>
+    <div class="service-card"><div class="service-icon">🔧</div><h3>Emergency Roadside</h3><p>Jump starts, flat tire changes, lockouts, fuel delivery, and winch outs. Stuck on the side of the road? We're on our way.</p></div>
+    <div class="service-card"><div class="service-icon">🏆</div><h3>Specialty Car Towing</h3><p>Luxury cars, EVs, and collector vehicles handled with care. Soft-strap towing for high-end vehicles — no damage guaranteed.</p></div>
+    <div class="service-card"><div class="service-icon">🚙</div><h3>Off-Road Recovery</h3><p>Stuck in ice, mud, snow, or a ditch? Our professional recovery team is available around the clock to get you out.</p></div>
+  </div>
+</section>
+
+<div class="areas-section">
+  <div class="areas-inner">
+    <div class="section-header">
+      <div class="section-label">Where We Roll</div>
+      <h2>Service <span>Areas</span></h2>
+    </div>
+    <div class="areas-grid">
+      <div class="area-item">Baltimore City</div>
+      <div class="area-item">Owings Mills</div>
+      <div class="area-item">Reisterstown</div>
+      <div class="area-item">Pikesville</div>
+      <div class="area-item">Randallstown</div>
+      <div class="area-item">Catonsville</div>
+      <div class="area-item">Westminster</div>
+      <div class="area-item">Eldersburg</div>
+      <div class="area-item">Sykesville</div>
+      <div class="area-item">I-695</div>
+      <div class="area-item">I-795</div>
+      <div class="area-item">I-70 / MD 140</div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">Why Kingz</div>
+    <h2>Baltimore's <span>Choice</span> For Towing</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-item"><div class="why-bullet">✓</div><p>Family-Owned & Operated</p></div>
+    <div class="why-item"><div class="why-bullet">✓</div><p>24/7 Live Dispatch — Always Answer</p></div>
+    <div class="why-item"><div class="why-bullet">✓</div><p>Serving Baltimore City & County</p></div>
+    <div class="why-item"><div class="why-bullet">✓</div><p>Serving Carroll County</p></div>
+    <div class="why-item"><div class="why-bullet">✓</div><p>Locally Trusted & Recommended</p></div>
+    <div class="why-item"><div class="why-bullet">✓</div><p>Soft-Strap Specialty Towing</p></div>
+    <div class="why-item"><div class="why-bullet">✓</div><p>Fast Response Times</p></div>
+    <div class="why-item"><div class="why-bullet">✓</div><p>Affordable & Transparent Pricing</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">What People Say</div>
+    <h2>Real <span>Reviews</span></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Highly recommend! Very responsive, quick to arrive, and efficient. Had my car taken care of in under 10 minutes. So kind!"</p><div class="review-author">Sarah M. — Google Review</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Fast, professional service and very good pricing. Thank you Kingz Towing team."</p><div class="review-author">Michael R. — Google Review</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Kingz was there in 30 minutes. Fast, safe & reliable. Highly recommend!"</p><div class="review-author">James K. — Google Review</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Best towing experience I've ever had. The driver was professional and took great care of my vehicle."</p><div class="review-author">Jennifer L. — Google Review</div></div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2>Need a Tow Right Now?</h2>
+  <p>Don't wait — call us and we'll be on our way in minutes.</p>
+  <a href="tel:+14438620500" class="cta-call-btn">&#9990; (443) 862-0500</a>
+</div>
+
+<footer>
+  <div>
+    <p style="color:#fff; font-weight:700; letter-spacing:2px; font-family:Impact,sans-serif; font-size:1rem;">KINGZ TOWING</p>
+    <p style="margin-top:4px;">Baltimore City, Baltimore County & Carroll County, MD</p>
+  </div>
+  <p>&copy; 2026 Kingz Towing. All rights reserved.</p>
+  <p><a href="tel:+14438620500">(443) 862-0500</a></p>
+</footer>
+
+</body>
+</html>

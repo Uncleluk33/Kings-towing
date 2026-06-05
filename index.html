@@ -49,7 +49,7 @@
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="tel:+14438620500" class="call-btn">&#9990; (443) 862-0500</a>
+  <a href="tel:+14438620500" onclick="gtag('event', 'conversion', {'send_to': 'AW-18045918579/REPLACE_WITH_LABEL'});" class="call-btn">&#9990; (443) 862-0500</a>
 </nav>
 
 <section class="hero">
@@ -63,7 +63,7 @@
   </div>
   <h1>Baltimore's <span>Most Trusted</span> Towing Service</h1>
   <p>Fast, professional towing and roadside assistance across Baltimore City, Baltimore County, and Carroll County — available 24/7/365.</p>
-  <a href="tel:+14438620500" class="hero-cta">&#9990; Call Now — (443) 862-0500</a>
+  <a href="tel:+14438620500" onclick="gtag('event', 'conversion', {'send_to': 'AW-18045918579/REPLACE_WITH_LABEL'});" class="hero-cta">&#9990; Call Now — (443) 862-0500</a>
   <p class="hero-sub">AVAILABLE 24 HOURS · 7 DAYS A WEEK · 365 DAYS A YEAR</p>
 </section>
 
@@ -141,7 +141,7 @@
 <div class="cta-section">
   <h2>Need a Tow Right Now?</h2>
   <p>Don't wait — call us and we'll be on our way in minutes.</p>
-  <a href="tel:+14438620500" class="cta-call-btn">&#9990; (443) 862-0500</a>
+  <a href="tel:+14438620500" onclick="gtag('event', 'conversion', {'send_to': 'AW-18045918579/REPLACE_WITH_LABEL'});" class="cta-call-btn">&#9990; (443) 862-0500</a>
 </div>
 
 <footer>
@@ -166,7 +166,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+14438620500">(443) 862-0500</a></li>
+          <li><a href="tel:+14438620500" onclick="gtag('event', 'conversion', {'send_to': 'AW-18045918579/REPLACE_WITH_LABEL'});">(443) 862-0500</a></li>
           <li><a href="mailto:Kingzntowing@gmail.com">Kingzntowing@gmail.com</a></li>
           <li><a href="contact.html">Get Directions</a></li>
         </ul>
@@ -179,5 +179,12 @@
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'conversion', {'send_to': 'AW-18045918579'});
+    });
+  });
+</script>
 </body>
 </html>

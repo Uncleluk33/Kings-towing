@@ -1,0 +1,28 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "kingz-towing-site.vercel.app"
+        }
+      ],
+      "destination": "https://kingztowingmd.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "kingz-towing-site.vercel.app"
+        }
+      ],
+      "destination": "https://kingztowingmd.com/:path*",
+      "permanent": true
+    }
+  ]
+}
